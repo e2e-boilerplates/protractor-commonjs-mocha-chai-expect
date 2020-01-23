@@ -1,29 +1,17 @@
-const { Key, ExpectedConditions } = require("protractor");
 const { expect } = require("chai");
 
-describe("google search", () => {
+describe("Sandbox", () => {
   before(() => {
-    browser.waitForAngularEnabled(false);
-    browser.get("https://www.google.com/");
+    browser.get("https://e2e-boilerplates.github.io/sandbox/");
   });
 
-  it("should be on google search page", async () => {
+  it("should be on Sandbox", async () => {
     const title = await browser.getTitle();
-    expect(title).to.equal("Google");
-  });
+    const header = element(by.css("h1"));
 
-  it("should search for Cheese!", async () => {
-    const searchBox = await element(by.name("q"));
-    // eslint-disable-next-line no-unused-expressions
-    expect(await searchBox.isDisplayed()).to.be.true;
-    searchBox.sendKeys("Cheese!", Key.ENTER);
-  });
-
-  it('the page title should start with "Cheese!"', async () => {
-    browser.wait(ExpectedConditions.urlContains("search"), 5000);
-
-    const title = await browser.getTitle();
-    const words = title.split(" ");
-    expect(words[0]).to.equal("Cheese!");
+    expect(title).to.equal("Sandbox");
+    header.getText().then(h => {
+      expect(h).to.equal("Sandbox");
+    });
   });
 });
