@@ -1,12 +1,12 @@
 {
-  "name": "protractor-commonjs-mocha-chai",
+  "name": "protractor-commonjs-mocha-chai-ecpect",
   "version": "1.0.0",
-  "description": "Protractor end-to-end test automation boilerplate, using Commonjs, Mocha and Chai.",
+  "description": "Protractor end-to-end test automation boilerplate, using Commonjs, Mocha, Chai and Expect.",
   "scripts": {
     "lint": "npx eslint --ext .js ./ --fix",
-    "test": "npx protractor protractor.conf.js",
-    "test-ci": "npx protractor protractor-ci.conf.js",
-    "upadte-webderiver": "npx webdriver-manager update"
+    "upadte-webderiver": "npx webdriver-manager update",
+    "upadte-webderiver-ci": "npx webdriver-manager update --versions.chrome=79.0.3945.36",
+    "test": "npx protractor"
   },
   "keywords": [
     "protractor",
@@ -14,7 +14,9 @@
     "mocha",
     "chai",
     "boilerplate",
-    "example"
+    "example",
+    "e2e",
+    "e2e test"
   ],
   "author": "Girma Nigusse <xgirma@gmail.com> (https://github.com/xgirma)",
   "license": "MIT",
@@ -35,8 +37,5 @@
     "hooks": {
       "pre-commit": "pretty-quick --staged"
     }
-  },
-  "dependencies": {
-    "puppeteer": "2.1.1"
   }
 }
