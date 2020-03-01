@@ -1,31 +1,13 @@
 {
-  "name": "protractor-commonjs-mocha-chai-ecpect",
-  "version": "1.0.0",
-  "description": "Protractor end-to-end test automation boilerplate, using Commonjs, Mocha, Chai and Expect.",
-  "scripts": {
-    "lint": "npx eslint --ext .js ./ --fix",
-    "upadte-webderiver": "npx webdriver-manager update",
-    "upadte-webderiver-ci": "npx webdriver-manager update --versions.chrome=79.0.3945.36",
-    "test": "npx protractor"
-  },
-  "keywords": [
-    "protractor",
-    "commonjs",
-    "mocha",
-    "chai",
-    "boilerplate",
-    "example",
-    "e2e",
-    "e2e test"
-  ],
   "author": "Girma Nigusse <xgirma@gmail.com> (https://github.com/xgirma)",
-  "license": "MIT",
+  "description": "Protractor end-to-end test automation boilerplate, using Commonjs, Mocha, Chai and Expect.",
   "devDependencies": {
     "chai": "4.2.0",
     "eslint": "6.8.0",
     "eslint-config-airbnb-base": "14.0.0",
     "eslint-config-prettier": "6.10.0",
     "eslint-plugin-import": "2.20.1",
+    "eslint-plugin-json": "^2.1.0",
     "eslint-plugin-prettier": "3.1.2",
     "husky": "4.2.3",
     "mocha": "7.0.1",
@@ -37,5 +19,30 @@
     "hooks": {
       "pre-commit": "pretty-quick --staged"
     }
-  }
+  },
+  "keywords": [
+    "boilerplate",
+    "chai",
+    "commonjs",
+    "e2e",
+    "e2e tests",
+    "example",
+    "expect",
+    "integration test",
+    "mocha",
+    "protractor"
+  ],
+  "license": "MIT",
+  "name": "protractor-commonjs-mocha-chai-expect",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/e2e-boilerplates/protractor-commonjs-mocha-chai-expect.git"
+  },
+  "scripts": {
+    "lint": "npx eslint --ext .js ./ --fix",
+    "upadte-webderiver": "npx webdriver-manager update",
+    "upadte-webderiver-ci": "npx webdriver-manager update --versions.chrome=79.0.3945.36",
+    "test": "npx protractor"
+  },
+  "version": "1.0.0"
 }
