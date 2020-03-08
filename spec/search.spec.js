@@ -1,7 +1,8 @@
 const { expect } = require("chai");
 
 describe("Sandbox", () => {
-  before(() => {
+  before(function fn() {
+    this.timeout(20000);
     browser.get("https://e2e-boilerplates.github.io/sandbox/");
   });
 
